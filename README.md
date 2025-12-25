@@ -212,6 +212,10 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 
 - GitHub: [@OptimizationGuru](https://github.com/OptimizationGuru)
 
+## 👀 WatchLive
+
+- Link: [@TheQuizMonk](https://thequizmonk.netlify.app/)
+
 ## 🙏 Acknowledgments
 
 - Built as a machine coding project

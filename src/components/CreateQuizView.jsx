@@ -108,14 +108,15 @@ function CreateQuizView({ onSave, onBack }) {
         <div className="flex items-center justify-between mb-8">
           <button
             onClick={onBack}
-            className="px-4 py-2 bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 rounded-lg hover:bg-white/20 transition-all duration-200"
+            className="px-3 sm:px-4 py-2 bg-white text-gray-700 border-2 border-gray-300 rounded-lg hover:bg-gray-50 transition-all duration-200 text-sm sm:text-base shadow-sm"
           >
-            ← Back
+            <span className="hidden sm:inline">← Back</span>
+            <span className="sm:hidden">←</span>
           </button>
-          <h2 className="text-2xl sm:text-3xl font-bold text-white">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 text-center flex-1 mx-2">
             Create New Quiz
           </h2>
-          <div className="w-24"></div> {/* Spacer */}
+          <div className="w-16 sm:w-24"></div> {/* Spacer */}
         </div>
 
         {/* Quiz Form */}
@@ -136,15 +137,17 @@ function CreateQuizView({ onSave, onBack }) {
               <div className="flex gap-3">
                 <button
                   onClick={() => handleAddQuestion('single')}
-                  className="px-4 py-2 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-all duration-200"
+                  className="p-3 bg-purple-100 hover:bg-purple-200 text-purple-700 rounded-lg transition-all duration-200 transform hover:scale-110 shadow-sm hover:shadow-md"
+                  title="Add Single Choice Question"
                 >
-                  ➕ Single Choice
+                  <span className="text-2xl">🔘</span>
                 </button>
                 <button
                   onClick={() => handleAddQuestion('multiple')}
-                  className="px-4 py-2 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-all duration-200"
+                  className="p-3 bg-indigo-100 hover:bg-indigo-200 text-indigo-700 rounded-lg transition-all duration-200 transform hover:scale-110 shadow-sm hover:shadow-md"
+                  title="Add Multiple Choice Question"
                 >
-                  ➕ Multiple Choice
+                  <span className="text-2xl">☑️</span>
                 </button>
               </div>
             )}
@@ -174,7 +177,19 @@ function CreateQuizView({ onSave, onBack }) {
           {questions.length === 0 && !showQuestionEditor && (
             <div className="text-center py-12 text-gray-500">
               <p className="text-lg mb-2">No questions added yet</p>
-              <p className="text-sm">Click "Single Choice" or "Multiple Choice" to add your first question</p>
+              <p className="text-sm flex items-center justify-center gap-1 flex-wrap">
+                Click 
+                <span className="inline-flex items-center gap-1">
+                  <span className="text-xl leading-none">🔘</span>
+                  <span>Single Choice</span>
+                </span>
+                or
+                <span className="inline-flex items-center gap-1">
+                  <span className="text-xl leading-none">☑️</span>
+                  <span>Multiple Choice</span>
+                </span>
+                to add your first question
+              </p>
             </div>
           )}
         </div>

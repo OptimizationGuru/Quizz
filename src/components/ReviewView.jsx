@@ -34,14 +34,15 @@ function ReviewView({ quiz, score, total, answers, onBack }) {
         <div className="flex items-center justify-between mb-8">
           <button
             onClick={onBack}
-            className="px-4 py-2 bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 rounded-lg hover:bg-white/20 transition-all duration-200"
+            className="px-3 sm:px-4 py-2 bg-white text-gray-700 border-2 border-gray-300 rounded-lg hover:bg-gray-50 transition-all duration-200 text-sm sm:text-base shadow-sm"
           >
-            ← Back to Home
+            <span className="hidden sm:inline">← Back to Home</span>
+            <span className="sm:hidden">← Home</span>
           </button>
-          <h2 className="text-2xl sm:text-3xl font-bold text-white">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 text-center flex-1 mx-2">
             Quiz Results
           </h2>
-          <div className="w-24"></div> {/* Spacer for centering */}
+          <div className="w-16 sm:w-24"></div> {/* Spacer for centering */}
         </div>
 
         {/* Score Display */}
@@ -49,7 +50,7 @@ function ReviewView({ quiz, score, total, answers, onBack }) {
 
         {/* Questions Review */}
         <div className="mt-8 space-y-6">
-          <h3 className="text-xl font-bold text-white mb-4">Question Review</h3>
+          <h3 className="text-xl font-bold text-gray-800 mb-4">Question Review</h3>
           
           {quiz.questions.map((question, index) => {
             const userAnswer = answers[index]
@@ -71,9 +72,10 @@ function ReviewView({ quiz, score, total, answers, onBack }) {
         <div className="mt-8 text-center">
           <button
             onClick={onBack}
-            className="px-8 py-3 bg-white text-purple-600 font-semibold rounded-lg hover:bg-purple-50 transition-all duration-200 transform hover:scale-105 shadow-lg"
+            className="px-6 sm:px-8 py-3 bg-white text-purple-600 font-semibold rounded-lg hover:bg-purple-50 transition-all duration-200 transform hover:scale-105 shadow-lg text-sm sm:text-base"
           >
-            Back to Home
+            <span className="hidden sm:inline">Back to Home</span>
+            <span className="sm:hidden">Home</span>
           </button>
         </div>
       </div>

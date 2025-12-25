@@ -22,10 +22,10 @@ export function Timer({ timeRemaining }) {
 
   return (
     <div
-      className={`px-4 py-2 rounded-lg font-mono font-bold text-lg transition-all duration-300 ${
+      className={`px-4 py-2 rounded-lg font-mono font-bold text-lg transition-all duration-300 shadow-md ${
         isLowTime
-          ? 'bg-red-500 text-white animate-pulse'
-          : 'bg-white/10 backdrop-blur-sm text-white border-2 border-white/30'
+          ? 'bg-red-100 text-red-700 border-2 border-red-300 animate-pulse'
+          : 'bg-blue-100 text-blue-700 border-2 border-blue-300'
       }`}
     >
       ⏱️ {String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}

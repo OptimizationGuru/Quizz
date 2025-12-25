@@ -145,12 +145,13 @@ function QuizHeader({ title, timeRemaining, onBack }) {
     <div className="flex items-center justify-between mb-6">
       <button
         onClick={onBack}
-        className="px-4 py-2 bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 rounded-lg hover:bg-white/20 transition-all duration-200"
+        className="px-3 sm:px-4 py-2 bg-white text-gray-700 border-2 border-gray-300 rounded-lg hover:bg-gray-50 transition-all duration-200 text-sm sm:text-base shadow-sm"
       >
-        ← Back
+        <span className="hidden sm:inline">← Back</span>
+        <span className="sm:hidden">←</span>
       </button>
       
-      <h2 className="text-2xl sm:text-3xl font-bold text-white text-center flex-1 mx-4">
+      <h2 className="text-lg sm:text-2xl lg:text-3xl font-bold text-gray-800 text-center flex-1 mx-2 sm:mx-4">
         {title}
       </h2>
 

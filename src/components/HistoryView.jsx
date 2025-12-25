@@ -27,14 +27,15 @@ function HistoryView({ history, quizzes, onBack, onReview }) {
         <div className="flex items-center justify-between mb-8">
           <button
             onClick={onBack}
-            className="px-4 py-2 bg-white/10 backdrop-blur-sm text-white border-2 border-white/30 rounded-lg hover:bg-white/20 transition-all duration-200"
+            className="px-3 sm:px-4 py-2 bg-white text-gray-700 border-2 border-gray-300 rounded-lg hover:bg-gray-50 transition-all duration-200 text-sm sm:text-base shadow-sm"
           >
-            ← Back
+            <span className="hidden sm:inline">← Back</span>
+            <span className="sm:hidden">←</span>
           </button>
-          <h2 className="text-2xl sm:text-3xl font-bold text-white">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 text-center flex-1 mx-2">
             Quiz History
           </h2>
-          <div className="w-24"></div> {/* Spacer */}
+          <div className="w-16 sm:w-24"></div> {/* Spacer */}
         </div>
 
         {/* History List */}
@@ -47,8 +48,8 @@ function HistoryView({ history, quizzes, onBack, onReview }) {
           />
         ) : (
           <div className="space-y-4">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-4">
-              <p className="text-white text-center font-semibold">
+            <div className="bg-white rounded-lg shadow-sm p-4 mb-4">
+              <p className="text-gray-800 text-center font-semibold">
                 Total Attempts: {sortedHistory.length}
               </p>
             </div>

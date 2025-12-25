@@ -140,14 +140,6 @@ All quiz data and history are stored locally in the browser's `localStorage`:
 
 Data persists across browser sessions and page refreshes.
 
-## 🧪 Testing
-
-See [TESTING_GUIDE.md](./TESTING_GUIDE.md) for comprehensive testing instructions and scenarios.
-
-## 📚 Documentation
-
-- **State Management**: See [STATE_MANAGEMENT.md](./STATE_MANAGEMENT.md) for detailed architecture explanation
-- **Testing Guide**: See [TESTING_GUIDE.md](./TESTING_GUIDE.md) for testing scenarios
 
 ## 🛠️ Development
 
